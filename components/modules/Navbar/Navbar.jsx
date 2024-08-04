@@ -20,7 +20,7 @@ const Navbar = () => {
             </Link>
             <ul className="navbar__left">
                 <ListItem text="Blog" children={<GrArticle />} />
-                <ListItem text="Contact Us" children={<MdOutlineContactSupport />} />
+                <ListItem text="Contacts" children={<MdOutlineContactSupport />} />
                 <ListItem text="Buy" children={<MdOutlineShoppingBag />} />
             </ul>
         </nav>

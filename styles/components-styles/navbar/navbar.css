@@ -1,3 +1,5 @@
+@import "./media.css";
+
 .navbar__parent,
 .navbar__right,
 .navbar__left {
@@ -14,13 +16,9 @@
     justify-content: center;
 }
 
-.navbar__right {
-
+.navbar__left .navbar__li:last-child a {
+    padding-right: 0 !important;
 }
-
-.navbar__left {}
-
-.navbar__li {}
 
 .navbar__li a {
     position: relative;
@@ -35,7 +33,6 @@
 }
 
 .navbar__logo {
-    box-shadow: 0 0 10px white;
     padding: 0 5em;
 }
 
@@ -54,5 +51,4 @@
     position: absolute;
     top: -10px;
     left: -2px;
-    z-index: -1;
 }
