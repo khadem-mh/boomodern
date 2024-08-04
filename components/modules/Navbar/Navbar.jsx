@@ -10,7 +10,7 @@ import { IoClose } from "react-icons/io5";
 const Navbar = () => {
 
     return (
-        <nav className="navbar__parent">
+        <nav className="navbar__parent navbare__hidden">
             <ul className="navbar__right">
                 <ListItem text="Home" children={<RiHome3Line />} />
                 <ListItem text="About" children={<GrContactInfo />} />
