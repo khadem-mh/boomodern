@@ -1,4 +1,6 @@
 import Logo from "../Logo/Logo"
+import ListItem from "../ListItem/ListItem";
+import Link from "next/link";
 //
 import { GrContactInfo, GrArticle } from "react-icons/gr";
 import { RiCustomerService2Line, RiHome3Line } from "react-icons/ri";
@@ -9,17 +11,17 @@ const Navbar = () => {
     return (
         <nav className="navbar__parent">
             <ul className="navbar__right">
-                <li className="navbar__li"><a href="#"><RiHome3Line className="navbar__item-icon"/>Home</a></li>
-                <li className="navbar__li"><a href="#"><GrContactInfo className="navbar__item-icon"/>About</a></li>
-                <li className="navbar__li"><a href="#"><RiCustomerService2Line className="navbar__item-icon"/>Services</a></li>
+                <ListItem text="Home" children={<RiHome3Line />} />
+                <ListItem text="About" children={<GrContactInfo />} />
+                <ListItem text="Services" children={<RiCustomerService2Line />} />
             </ul>
-            <a href="#" className="navbar__logo">
+            <Link href="#" className="navbar__logo">
                 <Logo />
-            </a>
+            </Link>
             <ul className="navbar__left">
-                <li className="navbar__li"><a href="#"><GrArticle className="navbar__item-icon"/>Blog</a></li>
-                <li className="navbar__li"><a href="#"><MdOutlineContactSupport className="navbar__item-icon"/>Contact Us</a></li>
-                <li className="navbar__li"><a href="#"><MdOutlineShoppingBag className="navbar__item-icon"/>Buy</a></li>
+                <ListItem text="Blog" children={<GrArticle />} />
+                <ListItem text="Contact Us" children={<MdOutlineContactSupport />} />
+                <ListItem text="Buy" children={<MdOutlineShoppingBag />} />
             </ul>
         </nav>
     )
