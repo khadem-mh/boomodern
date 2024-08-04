@@ -52,3 +52,18 @@
     top: -10px;
     left: -2px;
 }
+
+.navbar__close {
+    display: none;
+}
+
+.navbar__close svg:hover {
+    color: rgb(229, 75, 75);
+}
+
+.navbar__close svg {
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: whitesmoke;
+    transition: all 300ms;
+}

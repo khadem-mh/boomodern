@@ -5,6 +5,7 @@ import Link from "next/link";
 import { GrContactInfo, GrArticle } from "react-icons/gr";
 import { RiCustomerService2Line, RiHome3Line } from "react-icons/ri";
 import { MdOutlineContactSupport, MdOutlineShoppingBag } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
 
@@ -15,9 +16,16 @@ const Navbar = () => {
                 <ListItem text="About" children={<GrContactInfo />} />
                 <ListItem text="Services" children={<RiCustomerService2Line />} />
             </ul>
-            <Link href="#" className="navbar__logo">
-                <Logo />
-            </Link>
+
+            <div className="navbar__midd">
+                <div className="navbar__close">
+                    <IoClose />
+                </div>
+                <Link href="#" className="navbar__logo">
+                    <Logo />
+                </Link>
+            </div>
+
             <ul className="navbar__left">
                 <ListItem text="Blog" children={<GrArticle />} />
                 <ListItem text="Contacts" children={<MdOutlineContactSupport />} />
