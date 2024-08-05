@@ -15,11 +15,10 @@ const Navbar = () => {
 
     useEffect(() => {
         setIsClient(true)
+        resizePageHandler()
     }, [])
 
     useEffect(() => {
-
-        resizePageHandler()
 
         const handleResize = () => resizePageHandler()
 
@@ -39,8 +38,8 @@ const Navbar = () => {
                     <Link href="#" className="navbar__logo">
                         <Logo />
                     </Link>
-                    <div className="navbar__menu-icon">
-                        <RiMenu2Fill/>
+                    <div className="navbar__menu-icon" onClick={() => setIsShowNavbar('navbare__show')}>
+                        <RiMenu2Fill />
                     </div>
                 </menu>
             }
@@ -52,7 +51,7 @@ const Navbar = () => {
                 </ul>
 
                 <div className="navbar__midd">
-                    <div className="navbar__close" onClick={() => setIsShowNavbar(prev => !prev)}>
+                    <div className="navbar__close" onClick={() => setIsShowNavbar('navbare__hidden')}>
                         <IoClose />
                     </div>
                     <Link href="#" className="navbar__logo">
