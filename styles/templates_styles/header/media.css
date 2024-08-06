@@ -1,6 +1,111 @@
 @media screen and (max-width: 992px) {
+    
+    .header__parent, .header__video, .header__front {
+        min-height: 70vh !important;
+        max-height: 70vh !important;
+    }
+
     .header__front {
-        padding-top: 6.5rem !important;
+        padding-bottom: 3rem;
+    }
+
+    .header__writer-text h1 {
+        font-size: 2.9em !important;
+    }
+    
+    .Typewriter {
+        font-size: 3em !important;
+    }
+
+    .header__front h2 {
+        font-size: 1.4em !important;
+        margin-bottom: 4rem !important;
+    }
+
+    .header__front button {
+        font-size: 1.1em !important;
+    }
+
+}
+
+@media screen and (max-width: 620px) {
+
+    .header__front {
+        padding-bottom: 3.5rem !important;
+    }
+
+    .header__writer-text h1 {
+        font-size: 2.4em !important;
+    }
+    
+    .Typewriter {
+        font-size: 2.5em !important;
+    }
+
+    .header__front h2 {
+        font-size: 1.1em !important;
+        margin-bottom: 3rem !important;
+    }
+
+    .header__front button {
+        font-size: .9em !important;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .header__parent, .header__video, .header__front {
+        min-height: 60vh !important;
+        max-height: 60vh !important;
+    }
+
+    .header__writer-text h1 {
+        font-size: 1.8em !important;
+    }
+    
+    .Typewriter {
+        font-size: 2em !important;
+    }
+
+    .header__front h2 {
+        font-size: .9em !important;
+        margin-bottom: 3rem !important;
+    }
+
+    .header__front button {
+        font-size: .7em !important;
+    }
+
+}
+
+@media screen and (max-width: 380px) {
+
+    .header__parent, .header__video, .header__front {
+        min-height: 55vh !important;
+        max-height: 55vh !important;
+        text-align: center;
+    }
+
+    .header__front {
+        padding-bottom: 2rem;
+    }
+
+    .header__writer-text h1 {
+        font-size: 1.2em !important;
+    }
+    
+    .Typewriter {
+        font-size: 1.3em !important;
+    }
+
+    .header__front h2 {
+        font-size: .7em !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .header__front button {
+        font-size: .5em !important;
     }
 
 }
