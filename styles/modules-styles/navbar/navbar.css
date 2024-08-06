@@ -92,8 +92,9 @@
 /*? start styling menu responsive */
 
 .navbar__menu {
-    background-color: rgba(0, 0, 0, .6);
+    background-color: transparent;
     width: 100%;
+    position: absolute;
     height: fit-content;
     display: flex;
     align-items: center;

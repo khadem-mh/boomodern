@@ -1,5 +1,9 @@
+@import "./media.css";
+
 .header__parent {
     width: 100%;
+    min-height: 85vh;
+    max-height: 85vh;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -7,23 +11,25 @@
     color: white;
 }
 
-.header__video-src {
+.header__video {
     width: 100%;
-    position: absolute;
-}
-
-.header__video-src video {
+    min-height: 85vh;
+    max-height: 85vh;
     object-fit: cover;
-    width: 100%;
-    min-height: 80vh;
     z-index: -1 !important;
 }
 
 .header__front {
-    padding-top: 13rem;
+    width: 100%;
+    min-height: 85vh;
+    max-height: 85vh;
+    position: absolute;
+    top: auto;
+    bottom: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     z-index: 99 !important;
 }
 
@@ -51,7 +57,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
 }
 
 .header__front h2 {
@@ -62,7 +68,7 @@
 }
 
 .header__front button {
-    font-size: 1.7em;
+    font-size: 1.5em;
     background-color: rgba(250, 250, 250, .2);
     font-weight: bold;
     border-radius: 5rem;
