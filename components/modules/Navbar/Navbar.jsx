@@ -11,6 +11,7 @@ import { IoClose } from "react-icons/io5";
 const Navbar = () => {
 
     const [isClient, setIsClient] = useState(false)
+    const [isShowMenu, setIsShowMenu] = useState(false)
     const [isShowNavbar, setIsShowNavbar] = useState("")
 
     useEffect(() => {
@@ -28,12 +29,18 @@ const Navbar = () => {
 
     }, [isClient && window.innerWidth])
 
-    const resizePageHandler = () => window.innerWidth <= 992 ? setIsShowNavbar('navbare__hidden') : setIsShowNavbar('navbare__show')
+    const resizePageHandler = () => {
+        window.innerWidth <= 992
+            ?
+            (setIsShowNavbar('navbare__hidden'), setIsShowMenu(true))
+            :
+            (setIsShowNavbar('navbare__show'), setIsShowMenu(false))
+    }
 
     return (
         <section>
             {
-                isClient && isShowNavbar && window.innerWidth <= 992 &&
+                isClient && window.innerWidth <= 992 &&
                 <menu className="navbar__menu">
                     <Link href="#" className="navbar__logo">
                         <Logo />
