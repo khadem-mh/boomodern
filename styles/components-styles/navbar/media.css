@@ -77,3 +77,12 @@
     }
 
 }
+
+@media screen and (max-height: 820px) {
+    .navbar__parent {
+        height: 100vh;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        box-shadow: none;
+    }
+}
