@@ -102,6 +102,7 @@
     justify-content: space-between;
     padding: .8rem 1rem;
     margin: 0;
+    z-index: 2;
 }
 
 .navbar__menu-icon>svg {
