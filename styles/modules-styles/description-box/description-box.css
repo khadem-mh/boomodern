@@ -11,6 +11,7 @@
     text-align: center;
     transition: all 300ms ease;
     margin: 1rem;
+    position: relative;
 }
 
 .descbox__main:hover {
@@ -33,13 +34,15 @@
     width: fit-content;
 }
 
-.descbox__video::before {
+.descbox__main::before {
     content: "";
-    width: 70px;
-    height: 70px;
+    width: 70%;
+    height: 30px;
+    margin: auto;
     border-radius: 10rem;
-    background-color: rgba(128, 50, 128, .3);
+    background-color: rgba(128, 0, 128, .3);
     position: absolute;
-    bottom: -20px;
-    left: 15px;
+    right: 0;
+    left: 0;
+    z-index: 2;
 }
