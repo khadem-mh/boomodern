@@ -10,10 +10,13 @@ export default function Home() {
       </div>
 
       <section className="index__boxes">
-        <DescriptionBox />
-        <DescriptionBox />
-        <DescriptionBox />
+        <DescriptionBox title={"High performance"} text={"Improve your site's performance and get higher rankings in Google."} srcVideo={"videos/func1.mp4"} />
+        <DescriptionBox title={"The liveliest editor"} text={"No need for coding skills to customize and create ideal sites with Boo."} srcVideo={"videos/func2.mp4"} />
+        <DescriptionBox title={"Unique elements"} text={"Intense attention to detail is at the core of Bow's unique design."} srcVideo={"videos/func3.mp4"}/>
       </section>
+
+      <br /><br /><br /><br />
+
     </section>
   );
 }

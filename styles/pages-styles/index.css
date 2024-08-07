@@ -1,7 +1,10 @@
-.index__main {
-
-}
+.index__main {}
 
 .index__header {}
 
-.index__boxes {}
+.index__boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+}
