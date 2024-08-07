@@ -1,8 +1,6 @@
 @import "root.css";
 @import "pages-styles/index.css";
 @import "modules-styles/navbar/navbar.css";
-@import "modules-styles/description-box/description-box.css";
-@import "templates_styles/header/header.css";
 
 * {
   box-sizing: border-box;
@@ -15,6 +13,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {

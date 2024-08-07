@@ -1,3 +1,7 @@
+@import "../modules-styles/description-box/description-box.css";
+@import "../templates_styles/header/header.css";
+@import "../templates_styles/work-sample/work-sample.css";
+
 .index__main {}
 
 .index__header {}
@@ -7,4 +11,5 @@
     align-items: center;
     justify-content: center;
     height: max-content;
+    flex-wrap: wrap;
 }
