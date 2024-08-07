@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 
 .navbar__left .navbar__li:last-child a,
@@ -40,7 +41,7 @@
 }
 
 .navbar__li a:hover {
-    color: var(--gray-color);
+    color: var(--lightgray-color);
 }
 
 .navbar__logo {

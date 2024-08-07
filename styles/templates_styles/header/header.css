@@ -1,14 +1,13 @@
 @import "./media.css";
 
-
 .header__parent {
     width: 100%;
     min-height: 85vh;
     max-height: 85vh;
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
-    z-index: -1 !important;
+    z-index: 1;
     color: white;
 }
 
@@ -17,7 +16,7 @@
     min-height: 85vh;
     max-height: 85vh;
     object-fit: cover;
-    z-index: -1 !important;
+    z-index: -99 !important;
 }
 
 .header__front {
@@ -31,7 +30,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 99 !important;
+    z-index: 999 !important;
 }
 
 .header__writer-text {

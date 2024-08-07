@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Logo from "../Logo/Logo"
-import ListItem from "../ListItem/ListItem";
+import ListItem from "../../assets/ListItem/ListItem";
 import Link from "next/link";
 //
 import { GrContactInfo, GrArticle } from "react-icons/gr";
