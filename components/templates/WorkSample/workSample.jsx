@@ -1,13 +1,12 @@
 import ImgBox from "@/components/modules/assets/ImgBox/ImgBox"
 import datas from "../../../data/db.json"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 const WorkSample = () => {
 
     const [activeCategory, setActiveCategory] = useState('All')
     //categories
-    const [categoriesName, setCategoriesName] = useState(['All', 'Branding', 'Print', 'Photography', 'Product'])
-    const [allCategories, setAllCategories] = useState(datas)
+    const categoriesName = ['All', 'Branding', 'Print', 'Photography', 'Product'];
 
     return (
         <article className="worksample__main">
@@ -25,11 +24,11 @@ const WorkSample = () => {
             <section className="worksample__picture">
                 {
                     activeCategory !== 'All' ?
-                        [...allCategories].filter(item => item.category === activeCategory).map((item, index) => (
+                        [...datas].filter(item => item.category === activeCategory).map((item, index) => (
                             <ImgBox key={index} {...item} />
                         ))
                         :
-                        allCategories.map((item, index) => (
+                        datas.map((item, index) => (
                             <ImgBox key={index} {...item} />
                         ))
                 }
