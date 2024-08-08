@@ -8,24 +8,6 @@ const WorkSample = () => {
     //categories
     const [categoriesName, setCategoriesName] = useState(['All', 'Branding', 'Print', 'Photography', 'Product'])
     const [allCategories, setAllCategories] = useState(datas)
-    const [brandings, setBrandings] = useState([])
-    const [prints, setPrints] = useState([])
-    const [photographies, setPhotographies] = useState([])
-    const [products, setProducts] = useState([])
-
-    useEffect(() => {
-
-        const allBranding = [...datas].filter(item => item.category === "Branding")
-        const allProducts = [...datas].filter(item => item.category === "Products")
-        const allPhotography = [...datas].filter(item => item.category === "Photography")
-        const allPrint = [...datas].filter(item => item.category === "Print")
-
-        setBrandings(allBranding)
-        setProducts(allProducts)
-        setPhotographies(allPhotography)
-        setPrints(allPrint)
-
-    }, [])
 
     return (
         <article className="worksample__main">
@@ -42,9 +24,14 @@ const WorkSample = () => {
 
             <section className="worksample__picture">
                 {
-                    allCategories.map((item, index) => (
-                        <ImgBox key={index} {...item} />
-                    ))
+                    activeCategory !== 'All' ?
+                        [...allCategories].filter(item => item.category === activeCategory).map((item, index) => (
+                            <ImgBox key={index} {...item} />
+                        ))
+                        :
+                        allCategories.map((item, index) => (
+                            <ImgBox key={index} {...item} />
+                        ))
                 }
             </section>
 
