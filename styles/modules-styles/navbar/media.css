@@ -6,7 +6,7 @@
         border-top-right-radius: 2rem;
         border-bottom-right-radius: 2rem;
         background-color: rgba(45, 46, 46, 1);
-        position: fixed;
+        position: fixed !important;
         top: 0;
         left: 0;
         bottom: 0;
@@ -14,6 +14,7 @@
         justify-content: unset !important;
         overflow-y: auto;
         overflow-x: hidden;
+        z-index: 1001 !important;
     }
 
     .navbar__right,
