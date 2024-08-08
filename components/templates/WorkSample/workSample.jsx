@@ -1,27 +1,51 @@
 import ImgBox from "@/components/modules/assets/ImgBox/ImgBox"
+import datas from "../../../data/db.json"
+import { useEffect, useState } from "react"
 
 const WorkSample = () => {
+
+    const [activeCategory, setActiveCategory] = useState('All')
+    //categories
+    const [categoriesName, setCategoriesName] = useState(['All', 'Branding', 'Print', 'Photography', 'Product'])
+    const [allCategories, setAllCategories] = useState(datas)
+    const [brandings, setBrandings] = useState([])
+    const [prints, setPrints] = useState([])
+    const [photographies, setPhotographies] = useState([])
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+
+        const allBranding = [...datas].filter(item => item.category === "Branding")
+        const allProducts = [...datas].filter(item => item.category === "Products")
+        const allPhotography = [...datas].filter(item => item.category === "Photography")
+        const allPrint = [...datas].filter(item => item.category === "Print")
+
+        setBrandings(allBranding)
+        setProducts(allProducts)
+        setPhotographies(allPhotography)
+        setPrints(allPrint)
+
+    }, [])
 
     return (
         <article className="worksample__main">
             <h2 className="worksample__title">Portfolio review</h2>
             <nav className="worksample__nav">
                 <ul className="worksample__ul">
-                    <li className="worksample__li">All</li>
-                    <li className="worksample__li">Branding</li>
-                    <li className="worksample__li">Print</li>
-                    <li className="worksample__li">Photography</li>
-                    <li className="worksample__li">Products</li>
+                    {
+                        categoriesName.map((item, index) => (
+                            <li key={index} className={`worksample__li ${item === activeCategory ? 'worksample__li-active' : ''}`} onClick={() => setActiveCategory(item)}>{item}</li>
+                        ))
+                    }
                 </ul>
             </nav>
 
             <section className="worksample__picture">
-                <ImgBox srcImg={'work-sample-6.png'} titleHover={'website Sale Computer'} textHover={'Orders'} />
-                <ImgBox srcImg={'work-sample-3.jpg'} titleHover={'website Stars'} textHover={'work sample'} />
-                <ImgBox srcImg={'work-sample-4.png'} titleHover={'website Movies'} textHover={'Products'} />
-                <ImgBox srcImg={'work-sample-2.png'} titleHover={'website MusicPlayer'} textHover={'Photography'} />
-                <ImgBox srcImg={'work-sample-5.jpg'} titleHover={'website Personal'} textHover={'Cpourses'} />
-                <ImgBox srcImg={'work-sample-1.png'} titleHover={'website Free Course'} textHover={'Branding'} />
+                {
+                    allCategories.map((item, index) => (
+                        <ImgBox key={index} {...item} />
+                    ))
+                }
             </section>
 
         </article>
