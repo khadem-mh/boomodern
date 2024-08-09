@@ -1,14 +1,17 @@
 @import "./media.css";
 
-.worksample__default {
+.worksample__normal{
     opacity: 1;
     visibility: visible;
-    transition: opacity 0.5s ease-in-out !important;
+    transform: scale(1);
+    transition: all 400ms ease;
 }
 
-.item.hidden {
+.worksample__normal.hidden {
     opacity: 0;
-    visibility: hidden;
+    visibility: hidden !important;
+    transform: scale(0.8);
+    transition: all 400ms ease;
 }
 
 .worksample__main {

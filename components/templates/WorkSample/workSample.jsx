@@ -4,22 +4,14 @@ import { useEffect, useState } from "react"
 
 const WorkSample = () => {
 
-    const [allDatas, setAllDatas] = useState([])
     const [activeCategory, setActiveCategory] = useState('All')
     //categories
     const categoriesName = ['All', 'Branding', 'Print', 'Photography', 'Product'];
 
-    useEffect(() => {
-        setAllDatas(datas)
-    }, [])
-
     const handleFilteredDatas = activeItemText => {
-
         setActiveCategory(activeItemText)
 
         const datasFilter = [...datas].filter(item => activeItemText === item.category ? item : activeItemText === 'All' && item)
-
-        setAllDatas(datasFilter)
     }
 
     return (
@@ -37,8 +29,8 @@ const WorkSample = () => {
 
             <section className="worksample__picture">
                 {
-                    allDatas.map((item, index) => (
-                        <div key={index} className={`item ${activeCategory ? 'hidden' : ''}`}>
+                    datas.map((item, index) => (
+                        <div key={index} className={`worksample__normal ${ item.category !== activeCategory && activeCategory !== 'All' ? 'hidden' : ''}`}>
                             <ImgBox {...item} />
                         </div>
                     ))
