@@ -1,6 +1,6 @@
 @import "./media.css";
 
-.worksample__normal{
+.worksample__normal {
     opacity: 1;
     visibility: visible;
     transform: scale(1);
@@ -62,19 +62,17 @@
 .worksample__picture {
     margin-top: 3rem;
     width: 100%;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 1.5rem !important;
     position: relative;
     overflow: hidden;
 }
 
 .worksample__picture::before {
     content: "";
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     background-color: #d0b1f1;
     filter: blur(35px);
     border-radius: 100rem;

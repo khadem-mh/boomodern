@@ -1,0 +1,16 @@
+@media screen and (max-width: 340px) {
+    .descbox__main {
+        width: 309px !important;
+        height: 320px !important;
+        padding: 1rem 2rem !important;
+    }
+
+    .descbox__title {
+        font-size: 1.2em !important;
+    }
+
+    .descbox__text {
+        font-size: 1em !important;
+    }
+
+}

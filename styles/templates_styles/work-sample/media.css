@@ -1,3 +1,9 @@
+@media screen and (max-width: 1016px) {
+    .worksample__picture {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)) !important;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .worksample__title {
         font-size: 2em !important;
@@ -24,6 +30,11 @@
 
     .worksample__ul {
         gap: 10px !important;
+    }
+
+
+    .worksample__picture {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
     }
     
 }

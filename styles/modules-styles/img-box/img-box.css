@@ -1,5 +1,3 @@
-@import "./media.css";
-
 .imgbox__main {
     position: relative;
     display: flex;
@@ -38,12 +36,14 @@
 
 .imgbox__picture {
     position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
 .imgbox__img {
     object-fit: cover;
-    width: 600px;
+    width: inherit;
     height: 313px;
     transition: all 300ms;
 }
