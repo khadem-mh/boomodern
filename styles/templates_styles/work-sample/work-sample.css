@@ -1,3 +1,5 @@
+@import "./media.css";
+
 .worksample__main {
     width: 100%;
     height: auto;
@@ -52,6 +54,7 @@
     flex-wrap: wrap;
     border-radius: 1.5rem !important;
     position: relative;
+    overflow: hidden;
 }
 
 .worksample__picture::before {

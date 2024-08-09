@@ -1,0 +1,13 @@
+@media screen and (max-width: 650px) {
+    .imgbox__img {
+        width: 400px !important;
+        height: 213px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .imgbox__img {
+        width: 300px !important;
+        height: 113px !important;
+    }
+}

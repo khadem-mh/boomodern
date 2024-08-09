@@ -1,0 +1,29 @@
+@media screen and (max-width: 600px) {
+    .worksample__title {
+        font-size: 2em !important;
+    }
+
+    .worksample__li {
+        font-size: 1.1em !important;
+    }
+
+    .worksample__ul {
+        gap: 20px !important;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    .worksample__title {
+        font-size: 1.5em !important;
+    }
+
+    .worksample__li {
+        font-size: .9em !important;
+    }
+
+    .worksample__ul {
+        gap: 10px !important;
+    }
+    
+}
