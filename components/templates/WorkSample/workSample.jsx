@@ -20,7 +20,6 @@ const WorkSample = () => {
         const datasFilter = [...datas].filter(item => activeItemText === item.category ? item : activeItemText === 'All' && item)
 
         setAllDatas(datasFilter)
-
     }
 
     return (
@@ -39,7 +38,7 @@ const WorkSample = () => {
             <section className="worksample__picture">
                 {
                     allDatas.map((item, index) => (
-                        <div key={index}>
+                        <div key={index} className={`item ${activeCategory ? 'hidden' : ''}`}>
                             <ImgBox {...item} />
                         </div>
                     ))

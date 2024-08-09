@@ -1,5 +1,16 @@
 @import "./media.css";
 
+.worksample__default {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out !important;
+}
+
+.item.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .worksample__main {
     width: 100%;
     height: auto;
