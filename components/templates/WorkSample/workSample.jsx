@@ -1,12 +1,27 @@
 import ImgBox from "@/components/modules/assets/ImgBox/ImgBox"
 import datas from "../../../data/db.json"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const WorkSample = () => {
 
+    const [allDatas, setAllDatas] = useState([])
     const [activeCategory, setActiveCategory] = useState('All')
     //categories
     const categoriesName = ['All', 'Branding', 'Print', 'Photography', 'Product'];
+
+    useEffect(() => {
+        setAllDatas(datas)
+    }, [])
+
+    const handleFilteredDatas = activeItemText => {
+
+        setActiveCategory(activeItemText)
+
+        const datasFilter = [...datas].filter(item => activeItemText === item.category ? item : activeItemText === 'All' && item)
+
+        setAllDatas(datasFilter)
+
+    }
 
     return (
         <article className="worksample__main">
@@ -15,7 +30,7 @@ const WorkSample = () => {
                 <ul className="worksample__ul">
                     {
                         categoriesName.map((item, index) => (
-                            <li key={index} className={`worksample__li ${item === activeCategory ? 'worksample__li-active' : ''}`} onClick={() => setActiveCategory(item)}>{item}</li>
+                            <li key={index} className={`worksample__li ${item === activeCategory ? 'worksample__li-active' : ''}`} onClick={() => handleFilteredDatas(item)}>{item}</li>
                         ))
                     }
                 </ul>
@@ -23,14 +38,11 @@ const WorkSample = () => {
 
             <section className="worksample__picture">
                 {
-                    activeCategory !== 'All' ?
-                        [...datas].filter(item => item.category === activeCategory).map((item, index) => (
-                            <ImgBox key={index} {...item} />
-                        ))
-                        :
-                        datas.map((item, index) => (
-                            <ImgBox key={index} {...item} />
-                        ))
+                    allDatas.map((item, index) => (
+                        <div key={index}>
+                            <ImgBox {...item} />
+                        </div>
+                    ))
                 }
             </section>
 
