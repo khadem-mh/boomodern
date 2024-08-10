@@ -1,9 +1,17 @@
+import Customer from "../../assets/Customer/Customer"
+import customerInfos from "@/data/customers.json"
 
 const Customers = () => {
 
     return (
         <section>
-            css
+
+            {
+                customerInfos.map((item, index) => (
+                    <Customer key={index} {...item}/>
+                ))
+            }
+
         </section>
     )
 }

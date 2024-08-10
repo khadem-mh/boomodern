@@ -1,6 +1,7 @@
 import Header from "@/components/templates/base/Header/Header";
 import DescriptionBox from "@/components/modules/base/DescriptionBox/DescriptionBox";
 import WorkSample from "@/components/templates/base/WorkSample/workSample";
+import Customers from "@/components/templates/base/Customers/Customers";
 
 export default function Home() {
   return (
@@ -17,7 +18,11 @@ export default function Home() {
       </section>
 
       <section>
-        <WorkSample/>
+        <WorkSample />
+      </section>
+
+      <section>
+        <Customers />
       </section>
 
       <br /><br /><br /><br />

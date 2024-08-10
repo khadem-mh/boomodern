@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Bahman Elvand",
+        "desc": "I don't know what else to say. It's something you've never seen before. Unique design, high performance and great support!",
+        "imgSrc": "customer-1.jpg"
+    },
+    {
+        "name": "Mahmoud Lajurdi",
+        "desc": "I don't know what else to say. It's something you've never seen before. Unique design, high performance and great support!",
+        "imgSrc": "customer-2.jpg"
+    },
+    {
+        "name": "Roya Sultani",
+        "desc": "I don't know what else to say. It's something you've never seen before. Unique design, high performance and great support!",
+        "imgSrc": "customer-3.jpg"
+    }
+]
