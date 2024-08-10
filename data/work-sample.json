@@ -1,0 +1,38 @@
+[
+    {
+        "srcImg": "work-sample-6.png",
+        "category": "Branding",
+        "titleHover": "website Sale Computer",
+        "textHover": "Orders"
+    },
+    {
+        "srcImg": "work-sample-3.jpg",
+        "category": "Product",
+        "titleHover": "website Stars",
+        "textHover": "work sample"
+    },
+    {
+        "srcImg": "work-sample-4.png",
+        "category": "Photography",
+        "titleHover": "website Movies",
+        "textHover": "Products"
+    },
+    {
+        "srcImg": "work-sample-2.png",
+        "category": "Product",
+        "titleHover": "website MusicPlayer",
+        "textHover": "Photography"
+    },
+    {
+        "srcImg": "work-sample-5.jpg",
+        "category": "Photography",
+        "titleHover": "website Personal",
+        "textHover": "Cpourses"
+    },
+    {
+        "srcImg": "work-sample-1.png",
+        "category": "Print",
+        "titleHover": "website Free Course",
+        "textHover": "Branding"
+    }
+]

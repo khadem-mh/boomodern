@@ -4,7 +4,7 @@ import customerInfos from "@/data/customers.json"
 const Customers = () => {
 
     return (
-        <section>
+        <section className="customers__main">
 
             {
                 customerInfos.map((item, index) => (
