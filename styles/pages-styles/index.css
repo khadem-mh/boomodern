@@ -2,6 +2,7 @@
 @import "../templates_styles/header/header.css";
 @import "../templates_styles/work-sample/work-sample.css";
 @import "../modules-styles/img-box/img-box.css";
+@import "../templates_styles/customers/customers.css";
 
 .index__main {}
 

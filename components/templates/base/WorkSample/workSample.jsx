@@ -1,6 +1,6 @@
-import ImgBox from "@/components/modules/assets/ImgBox/ImgBox"
-import datas from "../../../data/db.json"
-import { useEffect, useState } from "react"
+import ImgBox from "@/components/templates/assets/ImgBox/ImgBox"
+import datas from "@/data/db.json"
+import { useState } from "react"
 
 const WorkSample = () => {
 
@@ -30,9 +30,7 @@ const WorkSample = () => {
             <section className="worksample__picture">
                 {
                     datas.map((item, index) => (
-                        <div key={index} className={`worksample__normal ${ item.category !== activeCategory && activeCategory !== 'All' ? 'hidden' : ''}`}>
-                            <ImgBox {...item} />
-                        </div>
+                        <ImgBox {...item} key={index} styles={`worksample__normal ${item.category !== activeCategory && activeCategory !== 'All' ? 'hidden' : ''}`} />
                     ))
                 }
             </section>

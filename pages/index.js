@@ -1,6 +1,6 @@
-import Header from "@/components/templates/Header/Header";
+import Header from "@/components/templates/base/Header/Header";
 import DescriptionBox from "@/components/modules/base/DescriptionBox/DescriptionBox";
-import WorkSample from "@/components/templates/WorkSample/workSample";
+import WorkSample from "@/components/templates/base/WorkSample/workSample";
 
 export default function Home() {
   return (
