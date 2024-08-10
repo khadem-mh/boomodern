@@ -1,16 +1,14 @@
 @import "./media.css";
 
 .worksample__normal {
-    opacity: 1;
-    visibility: visible;
     transform: scale(1);
+    filter: blur(0px);
     transition: all 400ms ease;
 }
 
 .worksample__normal.hidden {
-    opacity: 0;
-    visibility: hidden !important;
-    transform: scale(0.8);
+    transform: scale(0.7);
+    filter: blur(10px);
     transition: all 400ms ease;
 }
 
