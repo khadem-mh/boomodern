@@ -1,5 +1,5 @@
 import ImgBox from "@/components/templates/assets/ImgBox/ImgBox"
-import datas from "@/data/db.json"
+import datas from "@/data/work-sample"
 import { useState } from "react"
 
 const WorkSample = () => {
