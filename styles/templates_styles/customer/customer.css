@@ -89,13 +89,14 @@
 /* card right */
 
 .customer__right {
-    display: flex;
-    align-items: center;
+   display: flex;
+   align-items: center;
 }
 
 .customer__img {
-    width: 500px;
+    position: sticky;
+    top: 0;
+    width: 450px;
     margin-right: 10rem !important;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
+    border-radius: 2rem;
 }
