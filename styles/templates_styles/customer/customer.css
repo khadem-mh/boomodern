@@ -24,10 +24,9 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    z-index: -2;
+    z-index: 5;
     padding: 1rem;
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
+    border-radius: 2rem;
     box-shadow: 0 0 20px #d8c4ec;
     position: relative;
     overflow: hidden;
@@ -55,8 +54,6 @@
     left: 0;
 }
 
-.customer__right {}
-
 .customer__quote {
     border-radius: 2rem;
     width: 5em;
@@ -67,8 +64,6 @@
     line-height: 1.9rem;
     font-size: 1.3em;
 }
-
-.customer__desc {}
 
 .customer__name {
     color: gray;
@@ -89,4 +84,18 @@
     z-index: -1;
     border-top-left-radius: 25rem;
     border-bottom-left-radius: 0;
+}
+
+/* card right */
+
+.customer__right {
+    display: flex;
+    align-items: center;
+}
+
+.customer__img {
+    width: 500px;
+    margin-right: 10rem !important;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
 }

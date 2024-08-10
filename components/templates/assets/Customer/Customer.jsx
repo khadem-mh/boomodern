@@ -9,7 +9,7 @@ const Customer = ({imgSrc, name, desc}) => {
                 <p className="customer__name">- {name}</p>
             </div>
             <div className="customer__right">
-                <img src={`img/${imgSrc}`} alt="customer-image" />
+                <img src={`img/${imgSrc}`} alt="customer-image" className="customer__img"/>
             </div>
         </div>
     )
