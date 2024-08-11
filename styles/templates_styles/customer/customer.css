@@ -1,7 +1,6 @@
 .customer__main {
     display: flex;
     align-items: center;
-    margin: 1rem;
 }
 
 .customer__main:hover .customer__left {
@@ -39,19 +38,21 @@
     height: 150px;
     background-color: #d8c4ec;
     border-radius: 50rem;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
     position: absolute;
 }
 
 .customer__left::after {
     top: 0;
     left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .customer__left::before {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
 }
 
 .customer__quote {
@@ -96,7 +97,7 @@
 .customer__img {
     position: sticky;
     top: 0;
-    width: 450px;
+    width: 500px;
     margin-right: 10rem !important;
     border-radius: 2rem;
 }

@@ -4,7 +4,41 @@
     margin-top: 10rem;
     text-align: center;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.customers__normal {
+    transform: scale(1);
+    filter: blur(0);
+    transition: all 400ms;
+    z-index: 2;
+}
+
+.customers__normal.hidden {
+    transform: scale(.8);
+    filter: blur(10px);
+    transition: all 400ms;
+    z-index: 1;
+}
+
+
+.customers__active-1 {
+    transform: translateX(1060px);
+}
+
+.customers__active-2 {
+    transform: translateX(0);
+}
+
+.customers__active-3 {
+    transform: translateX(-1060px);
+}
+
+.customers__hidden-2-left {
+    transform: translateX(-1060px) !important;
+}
+
+.customers__hidden-2-right {
+    transform: translateX(1060px) !important;
 }

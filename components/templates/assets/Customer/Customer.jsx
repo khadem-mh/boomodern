@@ -1,8 +1,8 @@
 
-const Customer = ({imgSrc, name, desc}) => {
+const Customer = ({imgSrc, name, desc, styles, onClickCustomer, index}) => {
 
     return (
-        <div className="customer__main">
+        <div className={`customer__main ${styles}`} onClick={() => onClickCustomer(index)}>
             <div className="customer__left">
                 <img src="img/quote.png" alt="quote" className="customer__quote"/>
                 <p className="customer__desc">{desc}</p>

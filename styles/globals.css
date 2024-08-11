@@ -37,3 +37,11 @@ input:focus {
 button {
   cursor: pointer !important;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
