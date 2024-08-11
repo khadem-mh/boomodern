@@ -97,7 +97,7 @@
 .customer__img {
     position: sticky;
     top: 0;
-    width: 500px;
+    width: 500px !important;
     margin-right: 10rem !important;
     border-radius: 2rem;
 }

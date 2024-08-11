@@ -20,7 +20,16 @@ const Customers = () => {
                         {...item}
                         styles={`customers__normal ${isShowCustomer !== item.index
                             ?
-                            `hidden cursor-pointer ${isShowCustomer == 1 && item.index == 2 ? 'customers__hidden-2-left' : isShowCustomer == 3 && item.index == 2 ? 'customers__hidden-2-right' : ''}`
+                            `hidden cursor-pointer ${isShowCustomer == 1 && item.index == 2
+                                ?
+                                'customers__hidden-2-left'
+                                :
+                                isShowCustomer == 3 && item.index == 2
+                                    ?
+                                    'customers__hidden-2-right'
+                                    :
+                                    ''
+                            }`
                             :
                             `cursor-default customers__active-${item.index}`}`
                         }
