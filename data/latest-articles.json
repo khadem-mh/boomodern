@@ -2,16 +2,19 @@
     {
         "id": "1",
         "title": "Object oriented programming",
-        "text": "Lorem Ipsum dummy text with simple production"
+        "text": "Lorem Ipsum dummy text with simple production",
+        "srcImg": "img/blog-1.jpg" 
     },
     {
         "id": "2",
         "title": "Functional programming",
-        "text": "Lorem Ipsum dummy text with simple production"
+        "text": "Lorem Ipsum dummy text with simple production",
+        "srcImg": "img/blog-2.jpg" 
     },
     {
         "id": "3",
         "title": "Class programming",
-        "text": "Lorem Ipsum dummy text with simple production"
+        "text": "Lorem Ipsum dummy text with simple production",
+        "srcImg": "img/blog-3.jpg" 
     }
 ]

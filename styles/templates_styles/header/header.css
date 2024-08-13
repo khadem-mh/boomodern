@@ -47,8 +47,8 @@
     font-size: 3.5em;
     padding-left: .5rem;
     font-weight: bold;
-    text-shadow: 0 0 30px lightgray;
-    color: rgb(24, 26, 27);
+    text-shadow: 0 0 10px lightgray;
+    color: var(--primary-color);
 }
 
 .header__wave svg {
@@ -72,10 +72,10 @@
     background-color: rgba(250, 250, 250, .2);
     font-weight: bold;
     border-radius: 5rem;
-    color: var(--black-color);
+    color: var(--white-color);
     padding: 1rem 1.5rem;
     transition: all 300ms;
-    box-shadow: 0 0 10px lightgray inset, 0 0 15px lightgray;
+    box-shadow: 0 0 25px lightgray;
     border: 1px solid white;
 }
 
