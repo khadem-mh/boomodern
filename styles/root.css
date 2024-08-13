@@ -7,5 +7,6 @@
     --lightgray-color: lightgray;
     --white-color: whitesmoke;
     --primary-color: purple;
+    --primary-mid-color: rgba(128, 0, 128, .5);
     --primary-die-color: rgba(128, 0, 128, .3);
 }
