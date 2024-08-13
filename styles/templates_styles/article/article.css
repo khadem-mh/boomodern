@@ -49,10 +49,11 @@
     object-fit: cover;
     transition: all 400ms;
 }
+
 /*!  */
 .article__link {
     transform-style: preserve-3d;
-    transition: transform 0.1s;
+    transition: transform .1s ease;
     padding: 2rem;
     height: inherit;
     color: var(--white-color) !important;

@@ -1,40 +1,42 @@
 import Link from "next/link";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { useEffect } from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Article = ({ title, text, srcImg }) => {
 
     useEffect(() => {
-        const boxes = document.querySelectorAll('.article__link');
 
-        const handleMouseMove = (e, box) => {
-            const rect = box.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / centerY * 10;
-            const rotateY = (x - centerX) / centerX * 10;
-
-            box.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        };
-
-        const handleMouseLeave = (box) => {
-            box.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-        };
+        const boxes = document.querySelectorAll('.article__link')
 
         boxes.forEach(box => {
-            box.addEventListener('mousemove', (e) => handleMouseMove(e, box));
-            box.addEventListener('mouseleave', () => handleMouseLeave(box));
-        });
 
-        return () => {
-            boxes.forEach(box => {
-                box.removeEventListener('mousemove', (e) => handleMouseMove(e, box));
-                box.removeEventListener('mouseleave', () => handleMouseLeave(box));
-            });
-        };
-    }, []);
+            const handleMouseMove = (e) => {
+                const rect = box.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / centerY * 10;
+                const rotateY = (x - centerX) / centerX * 10;
+
+                box.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+            }
+
+            const handleMouseLeave = () => {
+                box.style.transform = `perspective(1000px) rotateX(0) rotateY(0)`
+            }
+
+            box.addEventListener('mousemove', handleMouseMove)
+            box.addEventListener('mouseleave', handleMouseLeave)
+
+            return () => {
+                box.removeEventListener('mousemove', handleMouseMove)
+                box.removeEventListener('mouseleave', handleMouseLeave)
+            }
+
+        })
+
+    }, [])
 
     return (
         <div className="article__main">
