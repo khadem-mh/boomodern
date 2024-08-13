@@ -36,5 +36,5 @@
 
 .latest-content__btn:hover {
    color: var(--primary-color);
-   box-shadow: 0 0 25px var(--primary-die-color), 0 0 5px var(--primary-die-color) inset;
+   box-shadow: 0 0 25px var(--primary-mid-color), 0 0 5px var(--primary-mid-color) inset;
 }
