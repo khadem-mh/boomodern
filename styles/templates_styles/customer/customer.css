@@ -4,7 +4,7 @@
 }
 
 .customer__main:hover .customer__left {
-    box-shadow: 0 0 50px #d8c4ec;
+    box-shadow: 0 0 50px var(--primary-die-color);
 }
 
 .customer__right,
@@ -16,7 +16,7 @@
 .customer__left {
     transition: all 300ms;
     background-color: #F9F9F9;
-    border: 1px solid #d8c4ec;
+    border: 1px solid var(--primary-die-color);
     border-right: 0;
     color: gray;
     display: flex;
@@ -26,7 +26,7 @@
     z-index: 5;
     padding: 1rem;
     border-radius: 2rem;
-    box-shadow: 0 0 20px #d8c4ec;
+    box-shadow: 0 0 20px var(--primary-die-color);
     position: relative;
     overflow: hidden;
 }
@@ -36,7 +36,7 @@
     content: "";
     width: 150px;
     height: 150px;
-    background-color: #d8c4ec;
+    background-color: var(--primary-die-color);
     border-radius: 50rem;
     position: absolute;
 }
@@ -90,8 +90,8 @@
 /* card right */
 
 .customer__right {
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .customer__img {

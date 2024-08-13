@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "title": "Object oriented programming",
+        "text": "Lorem Ipsum dummy text with simple production"
+    },
+    {
+        "id": "2",
+        "title": "Functional programming",
+        "text": "Lorem Ipsum dummy text with simple production"
+    },
+    {
+        "id": "3",
+        "title": "Class programming",
+        "text": "Lorem Ipsum dummy text with simple production"
+    }
+]

@@ -50,9 +50,9 @@
 .worksample__li:hover,
 .worksample__li-active {
     transition: all 300ms;
-    box-shadow: 0 0 20px #D9B2D9, 0 0 5px #D9B2D9 inset;
-    border: 1px solid purple;
-    color: purple;
+    box-shadow: 0 0 20px var(--primary-die-color), 0 0 5px var(--primary-die-color) inset;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 /*  */
@@ -71,7 +71,7 @@
     content: "";
     width: 550px;
     height: 550px;
-    background-color: #d0b1f1;
+    background-color: var(--primary-die-color);
     filter: blur(35px);
     border-radius: 100rem;
     position: absolute;
@@ -84,7 +84,7 @@
     content: "";
     width: 550px;
     height: 550px;
-    background-color: #D9B2D9;
+    background-color: var(--primary-die-color);
     filter: blur(35px);
     border-radius: 100rem;
     position: absolute;

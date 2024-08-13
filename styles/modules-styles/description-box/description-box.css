@@ -42,7 +42,7 @@
     height: 30px;
     margin: auto;
     border-radius: 10rem;
-    background-color: rgba(128, 0, 128, .3);
+    background-color: var(--primary-die-color);
     position: absolute;
     right: 0;
     left: 0;

@@ -11,7 +11,7 @@ const Customers = () => {
     }
 
     return (
-        <section className="customers__main">
+        <div className="customers__main">
 
             <h2 className="customers__title">Customer reviews</h2>
 
@@ -42,7 +42,7 @@ const Customers = () => {
                 }
             </div>
 
-        </section>
+        </div>
     )
 }
 

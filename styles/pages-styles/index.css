@@ -3,10 +3,11 @@
 @import "../templates_styles/work-sample/work-sample.css";
 @import "../modules-styles/img-box/img-box.css";
 @import "../templates_styles/customers/customers.css";
+@import "../templates_styles/latest-content/latest-content.css";
 
-.index__main {}
+/* .index__main {}
 
-.index__header {}
+.index__header {} */
 
 .index__boxes {
     display: flex;
