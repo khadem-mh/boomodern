@@ -2,10 +2,37 @@
 
 .customers__main {
     margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.customers__slider {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.customers__title {
+    width: fit-content;
+    text-align: center;
+    margin-bottom: 7rem;
+    font-size: 2.7em;
+    position: relative;
+}
+
+.customers__title::before {
+    content: "☺";
+    width: 130px;
+    height: 130px;
+    background-color: transparent;
+    box-shadow: 0 0 10px lightgray inset, 0 0 15px lightgray;
+    position: absolute;
+    top: -45px;
+    left: -20px;
+    z-index: -1;
+    border-radius: 50rem;
 }
 
 .customers__normal {
@@ -21,7 +48,6 @@
     transition: all 400ms;
     z-index: 1;
 }
-
 
 .customers__active-1 {
     transform: translateX(1060px);

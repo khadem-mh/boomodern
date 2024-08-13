@@ -13,30 +13,34 @@ const Customers = () => {
     return (
         <section className="customers__main">
 
-            {
-                customerInfos.map((item, index) => (
-                    <Customer
-                        key={index}
-                        {...item}
-                        styles={`customers__normal ${isShowCustomer !== item.index
-                            ?
-                            `hidden cursor-pointer ${isShowCustomer == 1 && item.index == 2
+            <h2 className="customers__title">Customer reviews</h2>
+
+            <div className="customers__slider">
+                {
+                    customerInfos.map((item, index) => (
+                        <Customer
+                            key={index}
+                            {...item}
+                            styles={`customers__normal ${isShowCustomer !== item.index
                                 ?
-                                'customers__hidden-2-left'
-                                :
-                                isShowCustomer == 3 && item.index == 2
+                                `hidden cursor-pointer ${isShowCustomer == 1 && item.index == 2
                                     ?
-                                    'customers__hidden-2-right'
+                                    'customers__hidden-2-left'
                                     :
-                                    ''
-                            }`
-                            :
-                            `cursor-default customers__active-${item.index}`}`
-                        }
-                        onClickCustomer={changeActiveCustomer}
-                    />
-                ))
-            }
+                                    isShowCustomer == 3 && item.index == 2
+                                        ?
+                                        'customers__hidden-2-right'
+                                        :
+                                        ''
+                                }`
+                                :
+                                `cursor-default customers__active-${item.index}`}`
+                            }
+                            onClickCustomer={changeActiveCustomer}
+                        />
+                    ))
+                }
+            </div>
 
         </section>
     )
