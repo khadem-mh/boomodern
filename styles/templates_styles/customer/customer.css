@@ -16,7 +16,7 @@
 .customer__left {
     transition: all 300ms;
     background-color: #F9F9F9;
-    border-right: 0;
+    border-right: 0 !important;
     border: 8px dashed var(--primary-mid-color);
     color: gray;
     display: flex;
