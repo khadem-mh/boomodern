@@ -49,8 +49,10 @@
     object-fit: cover;
     transition: all 400ms;
 }
-
-.article__Link {
+/*!  */
+.article__link {
+    transform-style: preserve-3d;
+    transition: transform 0.1s;
     padding: 2rem;
     height: inherit;
     color: var(--white-color) !important;
@@ -60,7 +62,9 @@
     justify-content: space-between;
 }
 
-.article__title {}
+.article__link:hover {
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+}
 
 .article__text {
     line-height: 1.7rem;
@@ -72,7 +76,3 @@
     align-items: center;
     justify-content: space-between;
 }
-
-.article__btn {}
-
-.article__arrow {}
