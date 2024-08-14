@@ -11,20 +11,31 @@ const Footer = () => {
 
             <header className="footer__top">
                 <div className="footer__logos">
-                    <Logo />
-                    <div>
+                    <div className="footer__boomodern">
+                        <Logo />
+                    </div>
+                    <div className="footer__icons">
                         <FaInstagram />
                         <FaTelegramPlane />
                     </div>
                 </div>
                 <div className="footer__links">
-                    <p> <MdPhone /> 02191030926</p>
-                    <p><HiOutlineMail /> info@sabzlearn.ir</p>
-                    <p><FaInstagram /> @sabzlearn_support</p>
+                    <div className="footer__contact">
+                        <MdPhone />
+                        <span>02191030926</span>
+                    </div>
+                    <div className="footer__contact">
+                        <HiOutlineMail />
+                        <span>info@sabzlearn.ir</span>
+                    </div>
+                    <div className="footer__contact">
+                        <FaInstagram />
+                        <span>@sabzlearn_support</span>
+                    </div>
                 </div>
             </header>
 
-            <footer>
+            <footer className="footer__bottom">
                 <p>All material and intellectual rights of the site are reserved for Sabz Learn.</p>
                 <p>Made with ❤️ in Boomodern</p>
             </footer>
