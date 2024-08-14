@@ -1,0 +1,11 @@
+@media screen and (max-width: 576px) {
+    .advertisment__title {
+        line-height: 3rem;
+    }
+
+    .advertisment__btn {
+        margin-top: 1rem;
+        padding: .5 1rem;
+    }
+    
+}
