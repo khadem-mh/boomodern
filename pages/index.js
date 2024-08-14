@@ -3,6 +3,7 @@ import DescriptionBox from "@/components/modules/base/DescriptionBox/Description
 import WorkSample from "@/components/templates/base/WorkSample/workSample";
 import Customers from "@/components/templates/base/Customers/Customers";
 import LatestContent from "@/components/templates/base/LatestContent/LatestContent";
+import Advertisment from "@/components/templates/base/advertisement/Advertisment";
 
 export default function Home() {
   return (
@@ -28,6 +29,10 @@ export default function Home() {
 
       <section>
         <LatestContent />
+      </section>
+
+      <section>
+        <Advertisment />
       </section>
 
       <br /><br /><br /><br />
