@@ -28,7 +28,12 @@ const Footer = () => {
 
             <footer className="footer__bottom">
                 <p className="footer__desc">All material and intellectual rights of the site are reserved for Sabz Learn.</p>
-                <p>Made with ❤️ in Boomodern</p>
+                <div className="footer__my">
+                    <p> Made with ❤️ on Boomerang by </p>
+                    <a href="https://github.com/khadem-mh" target="_blank">
+                        <img src="img/khadem.png" alt="my" className="footer__myimg" />
+                    </a>
+                </div>
             </footer>
 
         </footer>

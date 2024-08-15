@@ -88,6 +88,17 @@
     margin-right: .5rem;
 }
 
+.footer__my {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer__myimg {
+    width: 50px;
+    border-radius: 50rem;
+}
+
 @media screen and (768px > width > 250px) {
     .footer__links {
         gap: 15px !important;
