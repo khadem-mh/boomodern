@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }) {
 
     return () => window.removeEventListener('scroll', scrollFooterHandler)
 
-  }, [isClient && window.scrollY])
+  }, [isClient])
 
   useEffect(() => {
 
@@ -50,7 +50,7 @@ export default function App({ Component, pageProps }) {
 
     return () => window.removeEventListener('resize', resizeFooterHandler)
 
-  }, [isClient && document.documentElement.clientWidth])
+  }, [isClient , prevWidth])
 
   const memoizedMainContent = useMemo(() => (
 
