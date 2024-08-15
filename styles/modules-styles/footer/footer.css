@@ -8,7 +8,6 @@
 }
 
 .footer__top {
-    /*     padding-bottom: 1rem; */
     border-bottom: 1px solid black;
 }
 
@@ -32,6 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    gap: 50px;
     padding: 2rem 0;
 }
 
@@ -51,4 +51,16 @@
 
 .footer__icons>svg:first-child {
     margin-right: 1rem;
+}
+
+.footer__contact {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer__contact > svg {
+    font-size: 1.7em;
+    color: lightgray;
+    margin-right: .5rem;
 }

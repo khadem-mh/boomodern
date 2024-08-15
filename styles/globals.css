@@ -8,6 +8,10 @@
   font-family: var(--font-family);
 }
 
+html {
+  overflow-x: hidden !important;
+}
+
 body {
   font-family: var(--font-family);
   direction: ltr;
