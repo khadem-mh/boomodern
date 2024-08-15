@@ -10,16 +10,31 @@ export default function App({ Component, pageProps }) {
   const [prevWidth, setPrevWidth] = useState(null);
 
   useEffect(() => {
-
+    setIsClient(true)
     setPrevWidth(window.innerWidth)
-
     document.querySelector('.app__footer').style.height = `${footerRef.current.clientHeight + 10}px`
-
   }, [])
 
   useEffect(() => {
 
-    setIsClient(true)
+    const scrollFooterHandler = e => {
+      const scrollPosition = window.innerHeight + window.scrollY
+      const appHeight = document.querySelector('.app__main').offsetHeight
+
+      scrollPosition >= appHeight
+        ?
+        footerRef.current.classList.add('footer-show')
+        :
+        footerRef.current.classList.remove('footer-show')
+    }
+
+    window.addEventListener('scroll', scrollFooterHandler)
+
+    return () => window.removeEventListener('scroll', scrollFooterHandler)
+
+  }, [isClient && window.scrollY])
+
+  useEffect(() => {
 
     const resizeFooterHandler = event => {
       const newWidth = event.srcElement.innerWidth;
@@ -31,27 +46,11 @@ export default function App({ Component, pageProps }) {
       }
     }
 
-    const scrollFooterHandler = e => {
-      const scrollPosition = window.innerHeight + window.scrollY
-      const appHeight = document.querySelector('.app__main').offsetHeight
-
-      if (scrollPosition >= appHeight) {
-        footerRef.current.classList.add('footer-show')
-      } else {
-        footerRef.current.classList.remove('footer-show')
-      }
-
-    }
-
     window.addEventListener('resize', resizeFooterHandler)
-    window.addEventListener('scroll', scrollFooterHandler)
 
-    return () => {
-      window.removeEventListener('resize', resizeFooterHandler)
-      window.removeEventListener('scroll', scrollFooterHandler)
-    }
+    return () => window.removeEventListener('resize', resizeFooterHandler)
 
-  }, [isClient, isClient && document.documentElement.clientWidth])
+  }, [isClient && document.documentElement.clientWidth])
 
 
   return (
