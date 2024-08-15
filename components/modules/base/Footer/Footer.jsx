@@ -20,14 +20,14 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer__links">
-                    <SocialItem text={"02191030926"} children={<MdPhone />} />
-                    <SocialItem text={"info@sabzlearn.ir"} children={<HiOutlineMail />} />
-                    <SocialItem text={"@sabzlearn_support"} children={<FaInstagram />} />
+                    <SocialItem text={"09031335939"} children={<MdPhone />} />
+                    <SocialItem text={"khadem13359@gmail.com"} children={<HiOutlineMail />} />
+                    <SocialItem text={"@khadem-mh"} children={<FaInstagram />} />
                 </div>
             </header>
 
             <footer className="footer__bottom">
-                <p>All material and intellectual rights of the site are reserved for Sabz Learn.</p>
+                <p className="footer__desc">All material and intellectual rights of the site are reserved for Sabz Learn.</p>
                 <p>Made with ❤️ in Boomodern</p>
             </footer>
 
