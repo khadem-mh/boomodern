@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useMemo } from "react";
 import "@/styles/globals.css";
 import Navbar from "@/components/modules/base/Navbar/Navbar";
 import Footer from "@/components/modules/base/Footer/Footer";
@@ -52,13 +52,18 @@ export default function App({ Component, pageProps }) {
 
   }, [isClient && document.documentElement.clientWidth])
 
+  const memoizedMainContent = useMemo(() => (
+
+    <div className="app__main">
+      <Navbar />
+      <Component {...pageProps} />
+    </div>
+
+  ), [Component, pageProps])
 
   return (
     <>
-      <div className="app__main">
-        <Navbar />
-        <Component {...pageProps} />
-      </div>
+      {memoizedMainContent}
       <div className="app__footer"></div>
       <Footer ref={footerRef} />
     </>
