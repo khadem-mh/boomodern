@@ -1,13 +1,14 @@
+import { forwardRef } from "react";
 import Logo from "../Logo/Logo"
 import SocialItem from "../../assets/SocialItem/socialItem";
 import { FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import { MdPhone } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 
-const Footer = () => {
+const Footer = forwardRef((props, ref) => {
 
     return (
-        <footer className="footer__main">
+        <footer className="footer__main" ref={ref}>
 
             <header className="footer__top">
                 <div className="footer__logos">
@@ -27,7 +28,7 @@ const Footer = () => {
             </header>
 
             <footer className="footer__bottom">
-                <p className="footer__desc">All material and intellectual rights of the site are reserved for Sabz Learn.</p>
+                <p className="footer__desc">All material and intellectual rights of the site are reserved for Boomodern.</p>
                 <div className="footer__my">
                     <p> Made with ❤️ on Boomerang by </p>
                     <a href="https://github.com/khadem-mh" target="_blank">
@@ -38,6 +39,6 @@ const Footer = () => {
 
         </footer>
     )
-}
+})
 
 export default Footer

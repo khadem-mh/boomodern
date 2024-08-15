@@ -1,5 +1,4 @@
 .article__main {
-    background-color: rgba(128, 128, 128, .8);
     width: 378px;
     height: 388px;
     border-radius: 1.5rem;
@@ -10,6 +9,11 @@
     align-items: center;
     justify-content: center;
     transition: all 400ms;
+    z-index: 2;
+}
+
+.article__main:hover .article__img {
+    filter: contrast(.5) !important;
 }
 
 .article__main::before {
@@ -41,7 +45,8 @@
 }
 
 .article__img {
-    z-index: -1;
+    filter: contrast(.2);
+    z-index: 0;
     border-radius: 1.5rem;
     position: absolute;
     width: inherit;
