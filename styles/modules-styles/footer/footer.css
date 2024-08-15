@@ -2,9 +2,15 @@
     border-top: 10px dashed var(--primary-color);
     width: 100%;
     color: var(--white-color);
-    background-color: var(--black-die-color);
+    background: radial-gradient(at center, rgba(0, 0, 0, .8), var(--black-die-color));
     padding: 2rem;
     padding-bottom: 1rem;
+}
+
+.footer__top,
+.footer__bottom {
+    max-width: 1400px;
+    margin: auto;
 }
 
 .footer__top {
@@ -54,12 +60,21 @@
 }
 
 .footer__contact {
+    cursor: pointer;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
-.footer__contact > svg {
+.footer__contact:hover svg path, .footer__contact {
+    transition: all 300ms;
+}
+
+.footer__contact:hover, .footer__contact:hover svg path {
+    color: skyblue;
+}
+
+.footer__contact>svg {
     font-size: 1.7em;
     color: lightgray;
     margin-right: .5rem;
