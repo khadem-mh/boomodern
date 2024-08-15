@@ -18,10 +18,10 @@ export default function App({ Component, pageProps }) {
   }, [])
 
   useEffect(() => {
-    
+
     setIsClient(true)
 
-    const resizeFooterHandler = (event) => {
+    const resizeFooterHandler = event => {
       const newWidth = event.srcElement.innerWidth;
       const appFooter = document.querySelector('.app__footer')
 
@@ -31,9 +31,25 @@ export default function App({ Component, pageProps }) {
       }
     }
 
-    window.addEventListener('resize', resizeFooterHandler);
+    const scrollFooterHandler = e => {
+      const scrollPosition = window.innerHeight + window.scrollY
+      const appHeight = document.querySelector('.app__main').offsetHeight
 
-    return () => window.removeEventListener('resize', resizeFooterHandler);
+      if (scrollPosition >= appHeight) {
+        footerRef.current.classList.add('footer-show')
+      } else {
+        footerRef.current.classList.remove('footer-show')
+      }
+
+    }
+
+    window.addEventListener('resize', resizeFooterHandler)
+    window.addEventListener('scroll', scrollFooterHandler)
+
+    return () => {
+      window.removeEventListener('resize', resizeFooterHandler)
+      window.removeEventListener('scroll', scrollFooterHandler)
+    }
 
   }, [isClient, isClient && document.documentElement.clientWidth])
 

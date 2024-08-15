@@ -21,11 +21,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.test {
-  width: 100%;
-  min-height: 274px;
-}
-
 .app__main {
   background-color: #fff;
 }
@@ -58,4 +53,8 @@ button {
 
 .cursor-default {
   cursor: default;
+}
+
+.footer-show {
+  z-index: 1;
 }
