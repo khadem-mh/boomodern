@@ -1,6 +1,6 @@
 import Logo from "../Logo/Logo"
-import { FaInstagram } from "react-icons/fa";
-import { FaTelegramPlane } from "react-icons/fa";
+import SocialItem from "../../assets/SocialItem/socialItem";
+import { FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import { MdPhone } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 
@@ -20,18 +20,9 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer__links">
-                    <div className="footer__contact">
-                        <MdPhone />
-                        <span>02191030926</span>
-                    </div>
-                    <div className="footer__contact">
-                        <HiOutlineMail />
-                        <span>info@sabzlearn.ir</span>
-                    </div>
-                    <div className="footer__contact">
-                        <FaInstagram />
-                        <span>@sabzlearn_support</span>
-                    </div>
+                    <SocialItem text={"02191030926"} children={<MdPhone />} />
+                    <SocialItem text={"info@sabzlearn.ir"} children={<HiOutlineMail />} />
+                    <SocialItem text={"@sabzlearn_support"} children={<FaInstagram />} />
                 </div>
             </header>
 

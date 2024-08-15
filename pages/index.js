@@ -35,8 +35,6 @@ export default function Home() {
         <Advertisment />
       </section>
 
-      <br /><br /><br /><br />
-
     </section>
   );
 }

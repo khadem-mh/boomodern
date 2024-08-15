@@ -1,0 +1,54 @@
+.footer__main {
+    border-top: 10px dashed var(--primary-color);
+    width: 100%;
+    color: var(--white-color);
+    background-color: var(--black-die-color);
+    padding: 2rem;
+    padding-bottom: 1rem;
+}
+
+.footer__top {
+    /*     padding-bottom: 1rem; */
+    border-bottom: 1px solid black;
+}
+
+.footer__boomodern svg path {
+    fill: var(--white-color);
+}
+
+.footer__logos,
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer__bottom {
+    padding-top: 1rem;
+}
+
+.footer__links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 0;
+}
+
+.footer__icons>svg {
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: all 300ms;
+    background-color: var(--primary-color);
+    border-radius: .4rem;
+    padding: .5rem;
+}
+
+.footer__icons svg:hover {
+    color: lightgray;
+    background-color: var(--primary-mid-color);
+}
+
+.footer__icons>svg:first-child {
+    margin-right: 1rem;
+}
