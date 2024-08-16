@@ -1,0 +1,71 @@
+@media screen and (max-width: 1600px) {
+
+    .customer__right,
+    .customer__left {
+        width: 400px !important;
+        height: 440px !important;
+    }
+
+    .customer__left {
+        border: 5px dashed var(--primary-mid-color) !important;
+    }
+
+    .customer__left::before,
+    .customer__left::after {
+        width: 75px !important;
+        height: 75px !important;
+    }
+
+    .customer__name::before {
+        top: -28px !important;
+        width: 60px !important;
+        height: 60px !important;
+    }
+
+    .customer__img {
+        width: 400px !important;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+
+    .customer__main {
+        flex-direction: column-reverse !important;
+    }
+
+    .customers__title {
+        margin-bottom: -5rem !important;
+    }
+
+    .customer__main:hover .customer__img {
+        transform: translateY(-40px);
+    }
+
+    .customer__right {
+        justify-content: center;
+        position: relative;
+    }
+
+    .customer__img {
+        position: absolute;
+        top: 170px;
+        width: 350px !important;
+        transition: all 400ms;
+    }
+
+}
+
+@media screen and (max-width: 756px) {
+
+    .customer__right,
+    .customer__left {
+        width: 330px !important;
+        height: 390px !important;
+    }
+
+    .customer__img {
+        width: 250px !important;
+    }
+
+}

@@ -1,3 +1,5 @@
+@import "./media.css";
+
 .customer__main {
     display: flex;
     align-items: center;
@@ -9,8 +11,8 @@
 
 .customer__right,
 .customer__left {
-    width: 530px;
-    height: 570px;
+    width: 500px;
+    height: 540px;
 }
 
 .customer__left {
@@ -18,6 +20,7 @@
     background-color: #F9F9F9;
     border-right: 0 !important;
     border: 8px dashed var(--primary-mid-color);
+    border-top: 0 !important;
     color: gray;
     display: flex;
     flex-direction: column;
@@ -57,19 +60,19 @@
 
 .customer__quote {
     border-radius: 2rem;
-    width: 5em;
+    width: clamp(50px, 4vw + 10px, 80px);
     position: relative;
 }
 
 .customer__desc {
     line-height: 1.9rem;
-    font-size: 1.3em;
+    font-size: clamp(10px, 1vw + 10px, 20px);
 }
 
 .customer__name {
     color: gray;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: clamp(10px, 1vw + 10px, 15px);
     position: relative;
 }
 
@@ -95,9 +98,6 @@
 }
 
 .customer__img {
-    position: sticky;
-    top: 0;
-    width: 500px !important;
-    margin-right: 10rem !important;
+    width: 470px;
     border-radius: 2rem;
 }

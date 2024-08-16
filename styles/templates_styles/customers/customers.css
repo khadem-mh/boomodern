@@ -1,7 +1,8 @@
+@import "./media.css";
 @import "../customer/customer.css";
 
 .customers__main {
-    margin-top: 10rem;
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
 }
 
 .customers__title {
@@ -39,40 +41,6 @@
     animation-duration: 2s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-}
-
-.customers__normal {
-    transform: scale(1);
-    filter: blur(0);
-    transition: all 400ms;
-    z-index: 2;
-}
-
-.customers__normal.hidden {
-    transform: scale(.8);
-    filter: blur(5px);
-    transition: all 400ms;
-    z-index: 1;
-}
-
-.customers__active-1 {
-    transform: translateX(1060px);
-}
-
-.customers__active-2 {
-    transform: translateX(0);
-}
-
-.customers__active-3 {
-    transform: translateX(-1060px);
-}
-
-.customers__hidden-2-left {
-    transform: translateX(-1060px) scale(.8) !important;
-}
-
-.customers__hidden-2-right {
-    transform: translateX(1060px) scale(.8) !important;
 }
 
 @keyframes love {
