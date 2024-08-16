@@ -50,7 +50,7 @@ export default function App({ Component, pageProps }) {
 
     return () => window.removeEventListener('resize', resizeFooterHandler)
 
-  }, [isClient , prevWidth])
+  }, [isClient, prevWidth])
 
   const memoizedMainContent = useMemo(() => (
 

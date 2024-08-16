@@ -1,0 +1,6 @@
+@media screen and (501px > width > 250px) {
+    .article__main {
+        width: 298px !important;
+        height: 308px !important;
+    }
+}
