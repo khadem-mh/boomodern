@@ -32,16 +32,18 @@ export default function Home() {
 
       <section className="index-customers">
 
-        <h2 className="index-customers__title">Customer reviews</h2>
+        <div className="index-customers__subject">
+          <h2 className="index-customers__title">Customer reviews</h2>
+        </div>
 
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-            {
-              customerInfos.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <Customer {...item} />
-                </SwiperSlide>
-              ))
-            }
+          {
+            customerInfos.map((item, index) => (
+              <SwiperSlide key={index} className="index-customers__SwiperSlide">
+                <Customer {...item} />
+              </SwiperSlide>
+            ))
+          }
         </Swiper>
 
       </section>
