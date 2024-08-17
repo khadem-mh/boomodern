@@ -1,7 +1,7 @@
 import Header from "@/components/templates/base/Header/Header";
 import DescriptionBox from "@/components/modules/base/DescriptionBox/DescriptionBox";
 import WorkSample from "@/components/templates/base/WorkSample/workSample";
-import Customers from "@/components/templates/base/Customers/Customers";
+import Customer from "@/components/templates/base/Customer/Customer"
 import LatestContent from "@/components/templates/base/LatestContent/LatestContent";
 import Advertisment from "@/components/templates/base/advertisement/Advertisment";
 //Swiper JS
@@ -10,7 +10,6 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 // Asset
-import Customer from "@/components/templates/assets/Customer/Customer"
 import customerInfos from "@/data/customers.json"
 
 export default function Home() {
@@ -31,18 +30,18 @@ export default function Home() {
         <WorkSample />
       </section>
 
-      <section>
+      <section className="index-customers">
+
+        <h2 className="index-customers__title">Customer reviews</h2>
 
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-          <Customers>
             {
               customerInfos.map((item, index) => (
-                <SwiperSlide>
-                  <Customer key={index} {...item} />
+                <SwiperSlide key={index}>
+                  <Customer {...item} />
                 </SwiperSlide>
               ))
             }
-          </Customers>
         </Swiper>
 
       </section>
