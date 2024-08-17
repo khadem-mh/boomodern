@@ -39,7 +39,7 @@
     }
 
     .customer__main:hover .customer__img {
-        transform: translateY(-40px);
+        transform: translateY(40px);
     }
 
     .customer__right {

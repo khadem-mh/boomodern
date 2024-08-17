@@ -4,6 +4,14 @@ import WorkSample from "@/components/templates/base/WorkSample/workSample";
 import Customers from "@/components/templates/base/Customers/Customers";
 import LatestContent from "@/components/templates/base/LatestContent/LatestContent";
 import Advertisment from "@/components/templates/base/advertisement/Advertisment";
+//Swiper JS
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+// Asset
+import Customer from "@/components/templates/assets/Customer/Customer"
+import customerInfos from "@/data/customers.json"
 
 export default function Home() {
   return (
@@ -24,7 +32,19 @@ export default function Home() {
       </section>
 
       <section>
-        <Customers />
+
+        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+          <Customers>
+            {
+              customerInfos.map((item, index) => (
+                <SwiperSlide>
+                  <Customer key={index} {...item} />
+                </SwiperSlide>
+              ))
+            }
+          </Customers>
+        </Swiper>
+
       </section>
 
       <section>
