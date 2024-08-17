@@ -1,0 +1,22 @@
+@media screen and (max-width: 700px) {
+
+    .index-customers__title::before {
+        width: 25px;
+        height: 30px;
+        top: -25px;
+        left: -35px;
+        font-size: .8em;
+    }
+
+    @keyframes love {
+        to {
+            width: 35px;
+            height: 30px;
+        }
+
+        from {
+            width: 25px;
+            height: 30px;
+        }
+    }
+}
