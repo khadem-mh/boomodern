@@ -27,6 +27,7 @@
 
 .index-customers__title {
     width: fit-content;
+    margin-top: 3.5rem;
     margin-bottom: 7rem;
     font-size: clamp(12px, 4vw + 12px, 43px);
     position: relative;
