@@ -21,9 +21,15 @@ const Footer = forwardRef((props, ref) => {
                     </div>
                 </div>
                 <div className="footer__links">
-                    <SocialItem text={"09031335939"} children={<MdPhone />} />
-                    <SocialItem text={"khadem13359@gmail.com"} children={<HiOutlineMail />} />
-                    <SocialItem text={"@khadem-mh"} children={<FaInstagram />} />
+                    <SocialItem text={"09031335939"} >
+                        <MdPhone />
+                    </SocialItem>
+                    <SocialItem text={"khadem13359@gmail.com"} >
+                        <HiOutlineMail />
+                    </SocialItem>
+                    <SocialItem text={"@khadem-mh"}>
+                        <FaInstagram />
+                    </SocialItem>
                 </div>
             </header>
 
