@@ -18,7 +18,7 @@ __*`Note: Any copying of this file and publishing it with a different appearance
 
 ## View of the project
 
-check this [URL](https://khadem-mh.github.io/music-player/) for visit this page
+check this [URL](https://boomodern.vercel.app) for visit this page
 
 <img src="public/img/page.png" alt="view" width="800px">
 <img src="public/img/page-2.png" alt="view" width="800px">
