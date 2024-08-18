@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import Logo from "../Logo/Logo"
-import SocialItem from "../../assets/SocialItem/socialItem";
+import SocialItem from "../../assets/SocialItem/SocialItem";
 import { FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import { MdPhone } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
