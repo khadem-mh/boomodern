@@ -28,10 +28,11 @@
 
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
 
     .customer__main {
         flex-direction: column-reverse !important;
+        text-align: center;
     }
 
     .customers__title {
@@ -39,7 +40,7 @@
     }
 
     .customer__main:hover .customer__img {
-        transform: translateY(40px);
+        transform: translateY(-10px);
     }
 
     .customer__right {
@@ -49,7 +50,7 @@
 
     .customer__img {
         position: absolute;
-        top: 170px;
+        top: 200px;
         width: 350px !important;
         transition: all 400ms;
     }
