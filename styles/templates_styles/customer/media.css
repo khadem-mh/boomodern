@@ -35,10 +35,6 @@
         text-align: center;
     }
 
-    .customers__title {
-        margin-bottom: -5rem !important;
-    }
-
     .customer__main:hover .customer__img {
         transform: translateY(-10px);
     }

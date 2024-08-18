@@ -1,32 +1,11 @@
-import React, { useRef, useState } from 'react';
 import Header from "@/components/templates/base/Header/Header";
 import DescriptionBox from "@/components/modules/base/DescriptionBox/DescriptionBox";
 import WorkSample from "@/components/templates/base/WorkSample/workSample";
-import Customer from "@/components/templates/base/Customer/Customer"
+import SwiperCustomer from "@/components/modules/base/SwiperCustomer/SwiperCustomer";
 import LatestContent from "@/components/templates/base/LatestContent/LatestContent";
 import Advertisment from "@/components/templates/base/advertisement/Advertisment";
-//Swiper JS
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-// import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-// Asset
-import customerInfos from "@/data/customers.json"
 
 export default function Home() {
-
-  const progressCircle = useRef(null)
-  const progressContent = useRef(null)
-
-  const onAutoplayTimeLeft = (s, time, progress) => {
-
-    progressCircle.current.style.setProperty('--progress', 1 - progress)
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`
-
-  }
 
   return (
     <section className="index__main">
@@ -51,37 +30,7 @@ export default function Home() {
           <h2 className="index-customers__title">Customer reviews</h2>
         </div>
 
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 10000,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          onAutoplayTimeLeft={onAutoplayTimeLeft}
-          className="mySwiper"
-        >
-
-          {
-            customerInfos.map((item, index) => (
-              <SwiperSlide key={index}>
-                <Customer {...item} />
-              </SwiperSlide>
-            ))
-          }
-
-          <div className="autoplay-progress" slot="container-end">
-            <svg viewBox="0 0 48 48" ref={progressCircle}>
-              <circle cx="24" cy="24" r="20"></circle>
-            </svg>
-            <span ref={progressContent}></span>
-          </div>
-        </Swiper>
+        <SwiperCustomer />
 
       </section>
 
